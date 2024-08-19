@@ -1,16 +1,12 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+f = open('17-1.txt')
+s = f.readlines()
+maxx = 0
+minn = 10**10
+for i in range(len(s)):
+    for j in range(i + 1, len(s)):
+        a = int(s[i]) + int(s[j])
+        if a >= maxx:
+            maxx = a
+        if a <= minn:
+            minn = a
+print(maxx, minn)
